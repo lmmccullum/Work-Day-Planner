@@ -34,6 +34,24 @@ $(document).ready(function () {
 
         array.push({ 'id': tId, 'task': Text });
         localStorage.setItem("tasks", JSON.stringify(array));
-        /
     })
+    
+    function init() {
+        // Get stored tasks from localStorage
+        // Parsing the JSON string to an object
+        var storedTasks = JSON.parse(localStorage.getItem("tasks"));
+      
+        // If tasks were retrieved from localStorage, update the tasks array to it
+        if (storedTasks !== null) {
+          tasks = storedTasks;
+        }
+      
+        // Render tasks to the DOM
+        renderTasks();
+      }
+
+      
+      
+
+    // localStorage.getItem("tasks", JSON.stringify(array));
 })
