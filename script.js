@@ -4,9 +4,10 @@ var hour = parseInt(moment().format("HH"))
 var now = moment()
 var formattedDate = now.format('dddd MMMM Do YYYY')
 console.log(formattedDate)
-var array = []
+var array = [];
 
 // Color Coding/OnClick
+
 $(document).ready(function () {
 
     $('#currentDay').text(formattedDate)
@@ -25,6 +26,7 @@ $(document).ready(function () {
     }
 
     // Local Storage 
+
     $(".saveBtn").on("click", function () {
         var tId;
         var Text;
@@ -35,23 +37,22 @@ $(document).ready(function () {
         array.push({ 'id': tId, 'task': Text });
         localStorage.setItem("tasks", JSON.stringify(array));
     })
-    
+
+    // Parsing the JSON string to an object
+    // Get stored tasks from localStorage
+
     function init() {
-        // Get stored tasks from localStorage
-        // Parsing the JSON string to an object
         var storedTasks = JSON.parse(localStorage.getItem("tasks"));
-      
-        // If tasks were retrieved from localStorage, update the tasks array to it
+
+
         if (storedTasks !== null) {
-          tasks = storedTasks;
+            array = storedTasks;
         }
-      
-        // Render tasks to the DOM
-        renderTasks();
-      }
 
-      
-      
-
-    // localStorage.getItem("tasks", JSON.stringify(array));
+        for (var i = 0; i < array.length; i++) {
+            var task = (storedTasks[i].task);
+            $('#' + i).val(task);
+        }
+    }
 })
+
