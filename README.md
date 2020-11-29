@@ -22,6 +22,8 @@ SCREENSHOT:
 
 The included image demonstrates the application functionality:
 
+![WorkDay Planner](https://i.imgur.com/oDTZk37.png)
+
 
 
 
