@@ -9,7 +9,7 @@ INSTRUCTIONS:
 To create a schedule, open the Daily Planner
 The current day is displayed at the top of the calendar
 Scroll down, the user will be presented with time blocks for standard business hours (9am-5pm)
-The user wil notice color-coded time blocks for that day which indicates whether it is in the past, present, or future
+The user will notice color-coded time blocks for that day which indicates whether it is in the past, present, or future
 Click desired time block and enter an event, then SAVE
 That event will be saved in local storage
 When the page is refreshed the saved events persist
